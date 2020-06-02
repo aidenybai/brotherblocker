@@ -9,7 +9,7 @@
   for (const url of bannedList) {
     if (url === window.location.origin) foundIllegal = true;
   }
-  if (url) {
+  if (foundIllegal) {
     ((window) => {
       const module = () => {
         let __dynamicStyleObject = null;
