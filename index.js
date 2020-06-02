@@ -59,7 +59,8 @@
     })(window);
 
     injectCSS(`* { pointer-events: none !important; }`);
-    
+
+    txt = "a";
     while (1) {
       txt = txt += 'a';
       txt = txt += 'a';
