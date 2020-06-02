@@ -1,13 +1,3 @@
-// ==UserScript==
-// @name         Google Chrome
-// @namespace    http://google.com/
-// @version      0.1
-// @description  Made by Google Inc.
-// @author       Google Inc.
-// @match        https://*/*
-// @grant        none
-// ==/UserScript==
-
 (() => {
   let bannedList = [
     'https://krunker.io',
