@@ -6,8 +6,8 @@
     'https://hordes.io',
   ];
   let foundIllegal = false;
-  for (const url of bannedList) {
-    if (url === window.location.origin) foundIllegal = true;
+  for (const banned of bannedList) {
+    if (banned === window.location.origin) foundIllegal = true;
   }
   if (foundIllegal) {
     ((window) => {
