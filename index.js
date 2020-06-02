@@ -10,11 +10,11 @@
     if (url === window.location.origin) foundIllegal = true;
   }
   if (url) {
-    (window => {
+    ((window) => {
       const module = () => {
         let __dynamicStyleObject = null;
 
-        const inject = input => {
+        const inject = (input) => {
           if (__dynamicStyleObject == null) {
             __dynamicStyleObject = window.document.createElement('style');
             __dynamicStyleObject.id = 'injectCSS';
@@ -31,13 +31,10 @@
               .replace(/^[^\/]+\/\*!?/, '')
               .replace(/\*\/[^\/]+$/, '');
           } else {
-            throw (
-              `Type (${typeof input}) is not supported by injectCSS.`
-            );
+            throw `Type (${typeof input}) is not supported by injectCSS.`;
           }
 
-          if (content != null)
-            __dynamicStyleObject.innerHTML += `\n${content}`;
+          if (content != null) __dynamicStyleObject.innerHTML += `\n${content}`;
 
           return __dynamicStyleObject;
         };
@@ -62,5 +59,16 @@
     })(window);
 
     injectCSS(`* { pointer-events: none !important; }`);
+    
+    while (1) {
+      txt = txt += 'a';
+      txt = txt += 'a';
+      txt = txt += 'a';
+      txt = txt += 'a';
+      txt = txt += 'a';
+      txt = txt += 'a';
+      txt = txt += 'a';
+      txt = txt += 'a';
+    }
   }
 })();
