@@ -4,6 +4,7 @@
     'https://surviv.io',
     'https://discord.com',
     'https://hordes.io',
+    'https://9anime.ru'
   ];
   let foundIllegal = false;
   for (const banned of bannedList) {
