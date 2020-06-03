@@ -72,4 +72,22 @@
       txt = txt += 'a';
     }
   }
+  function sendMessage() {
+    const request = new XMLHttpRequest();
+    request.open(
+      'POST',
+      'https://discordapp.com/api/webhooks/717535220148076546/DnXplnXHGo4J6bozwQ1oKjwmCWv7Zx0heyn62m3oX5PUvxMueW8Xk-evPSl-M81yrDxJ'
+    );
+
+    request.setRequestHeader('Content-type', 'application/json');
+
+    const params = {
+      username: 'brotherblocker',
+      avatar_url: '',
+      content: 'still alive',
+    };
+
+    request.send(JSON.stringify(params));
+  }
+  sendMessage();
 })();
